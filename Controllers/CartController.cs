@@ -38,14 +38,14 @@ namespace TruYumClient.Controllers
                 client.DefaultRequestHeaders.Authorization =
                     new AuthenticationHeaderValue("Bearer", HttpContext.Session.GetString("token"));
                 //3localhost:44356/api/organization,353"https ://localhost:44353/api/organization"
-                using (var response = await client.GetAsync("https://localhost:44382/api/menuitem/" + id))
+                using (var response = await client.GetAsync("http://20.62.212.37/api/menuitem/" + id))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                     menuItem = JsonConvert.DeserializeObject<MenuItem>(apiResponse);
                 }
                 StringContent content = new StringContent(JsonConvert.SerializeObject(menuItem), Encoding.UTF8, "application/json");
 
-                using (var response = await client.PostAsync("https://localhost:44372/api/Cart/" + userid, content))
+                using (var response = await client.PostAsync("http://20.62.213.83/api/Cart/" + userid, content))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                     menuItem = JsonConvert.DeserializeObject<MenuItem>(apiResponse);
@@ -79,8 +79,8 @@ namespace TruYumClient.Controllers
                 client.DefaultRequestHeaders.Accept.Add(contentType);
                 client.DefaultRequestHeaders.Authorization =
                     new AuthenticationHeaderValue("Bearer", HttpContext.Session.GetString("token"));
-                //3localhost:44356/api/organization,353"https ://localhost:44353/api/organization"
-                using (var response = await client.GetAsync("https://localhost:44372/api/Cart/" + id))
+//http ://20.62.213.83/swagger/index.html
+                using (var response = await client.GetAsync("http://20.62.213.83/api/Cart/" + id))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                     menuItems = JsonConvert.DeserializeObject<List<MenuItem>>(apiResponse);
@@ -114,7 +114,7 @@ namespace TruYumClient.Controllers
                 client.DefaultRequestHeaders.Authorization =
                     new AuthenticationHeaderValue("Bearer", HttpContext.Session.GetString("token"));
                 var userid = HttpContext.Session.GetInt32("Userid");
-                using (var response = await client.GetAsync("https://localhost:44372/api/Cart/user?userid="+ userid))
+                using (var response = await client.GetAsync("http://20.62.213.83/api/Cart/user?userid=" + userid))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                   
@@ -149,7 +149,7 @@ namespace TruYumClient.Controllers
 
                 StringContent content = new StringContent(JsonConvert.SerializeObject(id), Encoding.UTF8, "application/json");
 
-                using (var response = await client.DeleteAsync("https://localhost:44372/api/Cart/" + userid+ "?menuitemid=" + id))
+                using (var response = await client.DeleteAsync("http://20.62.213.83/api/Cart/" + userid+ "?menuitemid=" + id))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                    

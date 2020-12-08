@@ -1183,3 +1183,16 @@ System.Net.Http.HttpRequestException: No connection could be made because the ta
 2020-12-08 14:49:56,477 Content root path: E:\Truyum\TruYumClient
 2020-12-08 14:50:07,538 User Login
 2020-12-08 14:50:12,468 Http get request initiated for organization details
+2020-12-08 15:57:20,845 Application started. Press Ctrl+C to shut down.
+2020-12-08 15:57:20,860 Hosting environment: Development
+2020-12-08 15:57:20,862 Content root path: E:\Truyum\TruYumClient
+2020-12-08 15:57:37,485 User Login
+2020-12-08 15:57:39,141 Http get request initiated for organization details
+2020-12-08 15:57:41,895 Http get request initiated for add to cart
+2020-12-08 15:57:43,076 Http get request initiated for organization details
+2020-12-08 15:57:44,805 Http get request initiated for add to cart
+2020-12-08 15:57:45,956 Http get request initiated for organization details
+2020-12-08 15:57:47,476 Http get request initiated for Getting cart items
+2020-12-08 15:57:51,514 Http get request initiated to delete item from the cart
+2020-12-08 15:57:52,134 Http get request initiated for Getting cart items
+2020-12-08 15:58:00,250 User Log Out
